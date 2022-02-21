@@ -29,7 +29,6 @@ public class OrderingTest extends BaseTest {
                 .clickOnButtonPlaceOrder();
         cartPage.checkIsMessagesDisplayed();
 
-
     }
 
     @Test
@@ -43,7 +42,6 @@ public class OrderingTest extends BaseTest {
                 .clickOnRadioButtonPaymentWithCard()
                 .clickOnButtonPlaceOrderWithCard()
                 .checkIsRedirectToLiqpayPage();
-
 
     }
 }

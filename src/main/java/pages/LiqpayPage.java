@@ -1,6 +1,7 @@
 package pages;
 
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,10 +16,17 @@ public class LiqpayPage extends ParentPageWithElement {
         super(webDriver);
     }
 
+    public boolean isButtonSendDisplayed() {
+        try {
+            return isElementDisplayed(send);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public LiqpayPage checkIsRedirectToLiqpayPage() {
         webDriverWait10.until(ExpectedConditions.visibilityOf(send));
-        isElementDisplayed(send);
-
+        Assert.assertTrue("Element is not displayed", isButtonSendDisplayed());
         return this;
     }
 }

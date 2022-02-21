@@ -52,7 +52,6 @@ abstract public class ParentPage {
             logger.info("Element is not displayed");
             return false;
         }
-
     }
 
     protected void enterTextIntoInput(WebElement webElement, String text) {
@@ -66,7 +65,7 @@ abstract public class ParentPage {
         }
     }
 
-    protected void isCheckboxCondition(WebElement checkbox, String condition) {
+    protected void setStateToCheckBox(WebElement checkbox, String condition) {
         try {
             if (condition.equalsIgnoreCase("switchOn") && checkbox.isSelected()) {
                 logger.info("Checkbox is selected ");
@@ -84,7 +83,6 @@ abstract public class ParentPage {
         } catch (Exception e) {
             printErrorAndStopTest(e);
         }
-
     }
 
     private void printErrorAndStopTest(Exception e) {

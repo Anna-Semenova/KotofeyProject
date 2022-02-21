@@ -94,8 +94,8 @@ public class CartPage extends ParentPageWithElement {
         return this;
     }
 
-    public CartPage checkCounter(String a) {
-        Assert.assertEquals("Number ", a, quantity.getText());
+    public CartPage checkCounter(String numbersOf) {
+        Assert.assertEquals("Number ", numbersOf, quantity.getText());
         logger.info("Number " + quantity.getText());
 
         return this;
@@ -142,9 +142,8 @@ public class CartPage extends ParentPageWithElement {
         return this;
     }
 
-
     public CartPage clickOnCheckBox(String text) {
-        isCheckboxCondition(checkbox, text);
+        setStateToCheckBox(checkbox, text);
         return this;
     }
 
@@ -185,12 +184,12 @@ public class CartPage extends ParentPageWithElement {
         return this;
     }
 
-    public boolean IsMessageFieldDeliveryAddressDisplayed() {
+    public boolean isMessageFieldDeliveryAddressDisplayed() {
         return isMessageDisplayed(messageErrorFieldAddress);
     }
 
     public CartPage checkIsMessageAddressDisplayed() {
-        Assert.assertTrue("Message is not displayed", IsMessageFieldDeliveryAddressDisplayed());
+        Assert.assertTrue("Message is not displayed", isMessageFieldDeliveryAddressDisplayed());
         return this;
     }
 

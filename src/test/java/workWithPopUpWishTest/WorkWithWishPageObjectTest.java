@@ -12,8 +12,8 @@ public class WorkWithWishPageObjectTest extends BaseTest {
         homePage.openHomePage()
                 .clickOnSubPageBurgers()
                 .clickOnButtonWishOnBurgerSuper()
-                .checkIsRedirectWishPopUp()
                 .openWishPopUp()
+                .checkIsRedirectWishPopUp()
                 .checkBurgerSuperInWish();
     }
 

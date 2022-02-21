@@ -9,7 +9,6 @@ public class HomePage extends ParentPageWithElement {
     @FindBy(xpath = ".//*[@class='t395__title t-name t-name_xs' and text()='Піца']")
     private WebElement subPagePizza;
 
-
     @FindBy(xpath = ".//*[@class='t706__carticon-img']")
     private WebElement buttonCart;
 
@@ -59,13 +58,7 @@ public class HomePage extends ParentPageWithElement {
     }
 
     public HomePage checkIsButtonCartDisplayed() {
-        isButtonCartDisplayed();
-//        Assert.assertTrue(isElementDisplayed(buttonCart));
+        Assert.assertTrue("Button is not displayed", isButtonCartDisplayed());
         return this;
-    }
-
-    public CartPage openCart() {
-        clickOnElement(cart);
-        return new CartPage(webDriver);
     }
 }

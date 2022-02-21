@@ -28,13 +28,4 @@ public class BurgersPage extends ParentPageWithElement {
         return this;
     }
 
-    public BurgersPage checkIsRedirectWishPopUp() {
-        isElementDisplayed(wish);
-        return this;
-    }
-
-    public WishPopUpPage openWishPopUp() {
-        clickOnElement(wish);
-        return new WishPopUpPage(webDriver);
-    }
 }

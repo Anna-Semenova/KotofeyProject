@@ -31,11 +31,11 @@ public class BaseTest {
         cartPage = new CartPage(webDriver);
     }
 
-//    @After
-//    public void tearDown() {
-//        webDriver.quit();
-//        logger.info("Browser was closed");
-//
-//    }
+    @After
+    public void tearDown() {
+        webDriver.quit();
+        logger.info("Browser was closed");
+
+    }
 
 }

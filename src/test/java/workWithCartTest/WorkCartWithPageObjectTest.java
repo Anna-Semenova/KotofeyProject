@@ -16,7 +16,6 @@ public class WorkCartWithPageObjectTest extends BaseTest {
         cartPage.dellPizzaKidsInCart()
                 .сheckIsCartAfterDeletingPizzaKids();
 
-
     }
 
     @Test
