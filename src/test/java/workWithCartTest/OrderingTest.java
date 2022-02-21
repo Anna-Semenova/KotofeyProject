@@ -1,6 +1,7 @@
 package workWithCartTest;
 
 import baseTest.BaseTest;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,17 +18,16 @@ public class OrderingTest extends BaseTest {
     }
 
     @Test
-    public void unvalidValueInOrder() {
+    public void invalidValueInOrder() {
         cartPage.enterTextIntoFioInput("/")
                 .enterTextIntoPhoneInput("")
                 .enterTextIntoAddressInput("")
                 .clickOnRadioButtonToTheDoor()
                 .enterNumbersToFieldTime(timeDelivery)
-//                .checkDeliveryTime(timeDelivery)
+                .clickOnCheckBox("switchOff")
                 .clickOnRadioButtonPayCash()
-                .clickOnCheckBox("switchOn")
-                .clickOnButtonPlaceAnOrderWithCash()
-                .checkIsMessagesDisplayed();
+                .clickOnButtonPlaceOrder();
+        cartPage.checkIsMessagesDisplayed();
 
 
     }
@@ -38,10 +38,12 @@ public class OrderingTest extends BaseTest {
                 .enterTextIntoPhoneInput("123456789")
                 .enterTextIntoAddressInput("Киев")
                 .clickOnRadioButtonToTheDoor()
-                .enterNumbersToFieldTime("1200")
-                .clickOnRadioButtonPaymentWithCard()
+                .enterNumbersToFieldTime(timeDelivery)
                 .clickOnCheckBox("switchOn")
+                .clickOnRadioButtonPaymentWithCard()
                 .clickOnButtonPlaceOrderWithCard()
                 .checkIsRedirectToLiqpayPage();
+
+
     }
 }

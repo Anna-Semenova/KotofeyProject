@@ -3,7 +3,7 @@ package workWithCartTest;
 import baseTest.BaseTest;
 import org.junit.Test;
 
-public class WorkCartWithPageObject extends BaseTest {
+public class WorkCartWithPageObjectTest extends BaseTest {
     @Test
     public void addingAndRemovingItemsToCart() {
         homePage.openHomePage()
@@ -14,7 +14,7 @@ public class WorkCartWithPageObject extends BaseTest {
                 .addBurgerMiniToCart();
         homePage.openCart();
         cartPage.dellPizzaKidsInCart()
-                .сheckCartAfterDeletingItem();
+                .сheckIsCartAfterDeletingPizzaKids();
 
 
     }

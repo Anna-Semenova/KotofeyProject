@@ -23,12 +23,6 @@ public class HomePage extends ParentPageWithElement {
         super(webDriver);
     }
 
-//    @Override
-//    String getRelativeUrl() {
-//        return "/";
-//    }
-
-
     public HomePage openHomePage() {
         try {
             webDriver.get(baseUrl + "/");
@@ -50,24 +44,25 @@ public class HomePage extends ParentPageWithElement {
         return this;
     }
 
-    //    public boolean isButtonCartDisplayed() {
-//        try {
-//            return buttonCart.isDisplayed();
-//        } catch (Exception e) {
-//            logger.info("Button Cart is not displayed ");
-//            return false;
-//        }
-//    }
+    public boolean isButtonCartDisplayed() {
+        try {
+            return buttonCart.isDisplayed();
+        } catch (Exception e) {
+            logger.info("Button Cart is not displayed ");
+            return false;
+        }
+    }
+
     public BurgersPage clickOnSubPageBurgers() {
         clickOnElement(subPageBurgers);
         return new BurgersPage(webDriver);
     }
 
     public HomePage checkIsButtonCartDisplayed() {
-        Assert.assertTrue(isElementDisplayed(buttonCart));
+        isButtonCartDisplayed();
+//        Assert.assertTrue(isElementDisplayed(buttonCart));
         return this;
     }
-
 
     public CartPage openCart() {
         clickOnElement(cart);
