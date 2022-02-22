@@ -23,6 +23,6 @@ public class WishPopUpPage extends ParentPageWithElement {
     }
     public WishPopUpPage checkIsRedirectWishPopUp() {
         Assert.assertTrue(isElementDisplayed(messageWish));
-        return new WishPopUpPage(webDriver);
+        return this;
     }
 }
