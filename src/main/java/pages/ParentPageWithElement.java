@@ -17,10 +17,7 @@ abstract public class ParentPageWithElement extends ParentPage {
         super(webDriver);
     }
 
-    public WishPopUpPage checkIsRedirectWishPopUp() {
-        isElementDisplayed(wish);
-        return new WishPopUpPage(webDriver);
-    }
+
 
     public WishPopUpPage openWishPopUp() {
         clickOnElement(wish);

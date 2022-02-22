@@ -66,3 +66,5 @@
 6)  Кнопка платёжного приложения "Сплатити" - .//*[@class='button__send' and text()='Сплатити']
 
 7) Кнопка "Избранное" - .//*[@class='t1002__wishlisticon-wrapper']
+
+   Месседж "Вибране:" в WishPopUpPage - .//*[@class='t1002__wishlistwin-heading t-name t-name_xl']
